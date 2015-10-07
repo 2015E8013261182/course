@@ -43,7 +43,7 @@ end
 
 def hello(name)
   # YOUR CODE HERE
-  puts "Hello,#{name}"
+  return "Hello, #{name}"
 end
 
 def starts_with_consonant? s
@@ -52,11 +52,10 @@ def starts_with_consonant? s
     return false
   end
   str_up = s.upcase
-  puts str_up[0]
-  if Array['A','E','I','O','U'].include?str_up[0]
-    return false
-  else
+  if (Array('A'..'Z') - Array['A','E','I','O','U']).include?str_up[0]
     return true
+  else
+    return false
   end
 end
 
@@ -84,21 +83,22 @@ class BookInStock
     @price = price
   end
 
-  def setIsbn=(isbn)
+  def isbn=(isbn)
     @isbn = isbn
   end
 
-  def setPrice=(price)
+  def price=(price)
     @price = price
   end
 
-  def getIsbn
+  def isbn
     @isbn
   end
 
-  def getPrice
+  def price
     @price
   end
+
   def price_as_string
     '$%.2f' % @price
   end
