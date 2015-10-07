@@ -1,2 +1,2 @@
 # course
-Project for Advanced Software Engineering 
+Homework for Advanced Software Engineering 
